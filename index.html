@@ -28,9 +28,10 @@
               type="text"
               class="search__input"
               placeholder="What are you looking to watch?"
+              onchange="onSearch(event)"
       
             />
-            <button class="search__input--button" onclick="onSearch()">
+            <button class="search__input--button" onclick="callAPI()">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
@@ -42,6 +43,8 @@
         <div class="row">
           
             <div class="movie__list">
+              <!-- <h1 class="loading__state">Loading..</h1> -->
+             <h1 class="no-search">Your search does not exist!</h1>
               <!-- <div class="movie__card">
                 <figure class="movie__img--wrapper">
                     <img src="https://m.media-amazon.com/images/M/MV5BMTYzOTc2NzU3N15BMl5BanBnXkFtZTcwNjY3MDE3NQ@@._V1_SX300.jpg" class="movie__img" alt="">
@@ -69,7 +72,12 @@
                   <h3 class="movie__year">Movie year</h3>
                 </div>
             </div> -->
-          
+            
+            <div class="movie__card">
+              <div class="movie__img--skeleton"></div>
+              <div class="movie__title--skeleton"></div>
+              <div class="movie__year--skeleton"></div>
+              </div>
         </div>
       </div>
     </main>
